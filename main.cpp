@@ -5,51 +5,51 @@ vector<pair<int, float>> adj[1000];
 int E = 22;
 unordered_map<int, string> Stations = {
 
-    {1, "Mihan Khapri"},
+    {1, "Anna Nagar East"},
     // 3
-    {2, "New Airport"},
+    {2, "Anna Nagar Tower"},
     // 2.8
-    {3, "Airport South"},
+    {3, "Arumbakkam"},
     //.9
-    {4, "Nagpur Airport"},
+    {4, "Ashok Nagar"},
     // 1.1
-    {5, "Ujjwal Nagar"},
+    {5, "Chennai Central"},
     // .850
-    {6, "JP Nagar"},
+    {6, "Chennai International Airport"},
     // 2.5
-    {7, "Chhatrapati Sq"},
+    {7, "Egmore"},
     // 1.5
-    {8, "Ajni Square"},
+    {8, "Ekkattuthangal"},
     // 1.1
-    {9, "Rahate Colony"},
+    {9, "Government Estate"},
     // 1
-    {10, "Congress Ngr"},
+    {10, "Guindy"},
     // 1.7
-    {11, "Sitaburdi"},
+    {11, "High Court"},
     // .700
-    {12, "Zero Mile"},
+    {12, "Little Mount"},
     //.800
-    {13, "Kasturchand Prk"},
+    {13, "Nandanam"},
     // 0.550
-    {14, "Jhansi Rani"},
+    {14, "Saidapet"},
     // 0.9
-    {15, "Inst of Engg"},
+    {15, "Thousand Lights"},
     //.9
-    {16, "Shankar Nagar"},
+    {16, "Vadapalani"},
     // 1.2
-    {17, "LAD Chowk"},
+    {17, "Washermanpet"},
     // 2.2
-    {18, "Dharampeth Clg"},
+    {18, "Thirumangalam"},
     // 2.1
-    {19, "Subhas Ngr"},
+    {19, "Teynampet"},
     // 3
-    {20, "Rachna Ringrd"},
+    {20, "Shenoy Naga"},
     // 2.2
-    {21, "Vasudev Nagar"},
+    {21, "LIC"},
     // 0.950
-    {22, "Bansi Nagar"},
+    {22, "Mannadi"},
     // 2.8
-    {23, "Lokmanya Ngr"},
+    {23, "Nehru Park"},
 
 };
 void printLine()
@@ -86,7 +86,7 @@ void Display_Stations()
 void makeGraph()
 {
     vector<vector<float>> list = {
-        // Mihan To Kasturchand
+        // Anna Nagar East to Little Mount
         {1, 2, 3},
         {2, 3, 2.8},
         {3, 4, 0.9},
@@ -99,7 +99,7 @@ void makeGraph()
         {10, 11, 1.7},
         {11, 12, 0.700},
         {12, 13, 0.800},
-        // Lokmanya to Sitaburdi
+        // Nandanam to Nehru Park
         {11, 14, 0.550},
         {14, 15, 0.9},
         {15, 16, 0.9},
@@ -162,7 +162,7 @@ void shortestPath()
     cin >> dest;
 
     if (src == 11 or dest == 11)
-        isDesti = false; // src or desti is Sitabuldi
+        isDesti = false; // src or desti is Nandanam
 
     priority_queue<pair<float, float>, vector<pair<float, float>>, greater<pair<float, float>>> pq;
 
